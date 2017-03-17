@@ -53,6 +53,7 @@ function makeHobbits() {
   for (var i = 0; i < hobbits.length; i++) {
     var listItem = document.createElement("li");
     listItem.textContent = hobbits[i]; 
+    listItem.className = "hobbitlist"
     listItem.setAttribute("class", "hobbit");
     hobbitList.appendChild(listItem);  
   }
@@ -91,6 +92,7 @@ function makeBuddies() {
   // attach an unordered list of the 'buddies' in the aside
   for (var i = 0; i < buddies.length; i++) {
     var buddiesli = document.createElement("li");
+    buddiesli.className = "buddies";
     buddiesli.textContent = buddies[i];
     buddiesul.appendChild(buddiesli);
     aside.appendChild(buddiesul);
@@ -109,18 +111,15 @@ makeBuddies();
 
 function beautifulStranger() {
 
-  var aragorn = document.createTextNode("Aragorn");
-
-  var item = document.querySelectorAll("ul")[3];
-  // change the 'Strider' textnode to 'Aragorn'
-
-  item.replaceChild("Aragorn","Strider");
+  document.getElementsByClassName('buddies')[3].innerHTML = "Aragorn";
 }
 
 beautifulStranger();
 // Part 6
 
 function leaveTheShire() {
+
+
   // assemble the hobbits and move them to Rivendell
 }
 
