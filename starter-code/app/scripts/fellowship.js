@@ -98,7 +98,7 @@ function makeBuddies() {
   }
        var rivendell = document.querySelectorAll("h1")[1];
         console.log(rivendell);
-        
+
        rivendell.appendChild(aside); 
   // insert your aside as a child element of rivendell
 }
@@ -108,10 +108,16 @@ makeBuddies();
 
 
 function beautifulStranger() {
+
+  var aragorn = document.createTextNode("Aragorn");
+
+  var item = document.querySelectorAll("ul")[3];
   // change the 'Strider' textnode to 'Aragorn'
+
+  item.replaceChild("Aragorn","Strider");
 }
 
-
+beautifulStranger();
 // Part 6
 
 function leaveTheShire() {
